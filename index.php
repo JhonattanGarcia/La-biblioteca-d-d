@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca</title>
+  <link rel="stylesheet" href="Styles/styles.css">
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+  </style>
+</head>
+<body>
+
+  <!-- Hamburger Menu -->
+  <div class="hamburger-menu">
+      <div></div>
+      <div></div>
+      <div></div>
+  </div>
+
+  <div class="container">
+    <div class="biblioteca">
+      <h2>Biblioteca</h2>
+      <table>
+        <!-- Aquí se generarán dinámicamente los enlaces de los libros -->
+      </table>
+    </div>
+    
+    <div class="libro" id="contenidoLibro">
+      <p>Selecciona un libro para verlo.</p>
+    </div>
+  </div>
+
+  <script src="Scripts/scripts.js"></script>
+</body>
+</html>

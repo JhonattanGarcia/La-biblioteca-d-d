@@ -1,0 +1,168 @@
+    /* Import the Jacquard 12 font */
+    @import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+
+  p .cursiva {
+    font-style: italic;
+}
+
+
+
+
+.tangerine-regular {
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tangerine-bold {
+  font-family: "Tangerine", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+    @font-face {
+      font-family: 'Helene Queen';
+      src: url('../Otros/Helene Queen.K.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+  }
+  
+
+  .biblioteca {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    font-family: "Tangerine", cursive;
+   }
+  
+  .biblioteca h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .biblioteca table {
+    width: 100%;
+  }
+
+  .biblioteca td {
+    background-image: url('../Otros/Libro.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 10px;
+    color: #333;
+    margin-bottom: 0px;
+    font-family: "Tangerine", cursive;
+    font-weight: 400;
+    display: flex; /* Usamos flexbox para centrar el contenido */
+    justify-content: center; /* Centramos horizontalmente */
+    align-items: center; /* Centramos verticalmente */
+    text-align: center; /* Alineamos el texto dentro del a */
+}
+
+.biblioteca td a {
+    display: inline-block; /* Permite aplicar padding y centrado */
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con 70% de opacidad */
+    padding: 10px 20px; /* Añadimos un poco de padding alrededor del enlace */
+    text-decoration: none; /* Quitamos el subrayado del enlace */
+    color: #333; /* Color del texto */
+    border-radius: 5px; /* Bordes redondeados para el fondo del enlace */
+}
+
+  
+  .biblioteca table a {
+    text-decoration: none;
+    color: #333;
+    font-weight: lighter;
+  }
+  
+  .biblioteca table a:hover {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .libro {
+    width: 80%;
+    padding: 20px;
+    background-image: url('../Otros/papiro.jpg');
+    background-size: cover;
+    overflow-y: auto;
+  }
+  
+  .libro p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+  }
+
+  .libro p::first-letter {
+    font-size: 2.5em; /* Tamaño más grande para dar el efecto de letra capital */
+    font-weight: bold; /* Negrita para resaltar */
+    float: left; /* Flota a la izquierda para que el texto continúe al lado */
+    margin-right: 8px; /* Espacio entre la letra capital y el resto del texto */
+    line-height: 1; /* Ajusta la alineación vertical */
+        font-family: 'Helene Queen', serif;
+  }
+  
+/* Mobile styles */
+@media (max-width: 768px) {
+    /* Hide the biblioteca by default */
+    .biblioteca {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    /* Add a button for the hamburger menu */
+    .hamburger-menu {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1100;
+        width: 40px;
+        height: 40px;
+        background-color: #333;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hamburger-menu div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+    }
+
+    /* Show the biblioteca when it's active */
+    .biblioteca.active {
+        display: block;
+    }
+    .libro{
+        width: 100%;
+    }
+}
